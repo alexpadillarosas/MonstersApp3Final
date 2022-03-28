@@ -67,8 +67,11 @@ public class ShowMonstersFragment extends Fragment implements OnItemClickListene
         final Observer<List<Monster>> allMonstersObserver = new Observer<List<Monster>>() {
             @Override
             public void onChanged(List<Monster> monsters) {
-                //update RecyclerView
-                adapter.setMonsters(monsters);
+                // update RecyclerView, submitList compares the oldList(in the recyclerView)
+                // with the new list coming from the database, and it will calculate at which
+                // position the list has changed, so we don't redraw the whole recyclerView
+                // just the Monsters that changed.
+                adapter.submitList(monsters);
             }
         };
         mViewModel.getAllMonsters().observe(getViewLifecycleOwner(), allMonstersObserver);

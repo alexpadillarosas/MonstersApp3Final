@@ -1,9 +1,6 @@
 package com.blueradix.android.monstersapp3final.monster.show;
 
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,8 +36,6 @@ public class MonsterViewHolder extends RecyclerView.ViewHolder{
             averageRate = 0.0f;
         }
         this.binding.monsterRatingBar.setRating(averageRate);
-
-//        this.binding.monsterImageView.setImageResource(R.drawable.monster_7);
 
         if(monster.getImage().isEmpty()) {
             this.binding.monsterImageView.setImageResource(R.drawable.monster_7);

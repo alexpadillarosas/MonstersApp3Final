@@ -72,9 +72,9 @@ public abstract class MonsterRoomDatabase extends RoomDatabase {
         //we execute database operations in threads
         MonsterRoomDatabase.databaseWriteExecutor.execute( () -> {
             MonsterDao monsterDao = INSTANCE.monsterDao();
-            monsterDao.insert(new Monster("Alex", "I'm an ugly mate", "image_2", 5, 1, 4));
-            monsterDao.insert(new Monster("Bogeyman", "BooOOOooOOO", "image_14", 5, 2, 3));
-            monsterDao.insert(new Monster("Bigfoot", "I run long distances ", "image_25", 2, 3, 8));
+            monsterDao.insert(new Monster("Alex", "I'm an ugly mate", "monster_2", 5, 1, 4));
+            monsterDao.insert(new Monster("Bogeyman", "BooOOOooOOO", "monster_4", 5, 2, 3));
+            monsterDao.insert(new Monster("Bigfoot", "I run long distances ", "monster_18", 2, 3, 8));
         });
 
     }

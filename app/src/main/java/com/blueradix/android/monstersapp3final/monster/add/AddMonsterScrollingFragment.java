@@ -85,6 +85,9 @@ public class AddMonsterScrollingFragment extends Fragment {
                 monster.setDescription(description);
                 monster.setScariness(scarinessValue);
                 monster.setImage(imageName);
+                monster.setStars(0);
+                monster.setScariness(0);
+                monster.setVotes(0);
 
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("ADD_MONSTER", monster);

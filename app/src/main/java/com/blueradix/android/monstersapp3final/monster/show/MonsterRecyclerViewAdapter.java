@@ -26,16 +26,16 @@ public class MonsterRecyclerViewAdapter extends ListAdapter<Monster, MonsterView
     private static final DiffUtil.ItemCallback<Monster> DIFF_CALLBACK = new DiffUtil.ItemCallback<Monster>() {
         @Override
         public boolean areItemsTheSame(@NonNull Monster oldItem, @NonNull Monster newItem) {
-            return oldItem.getId() == newItem.getId();
+            return oldItem.getId().equals(newItem.getId());
             // If the old monster and the new monster have the same ID then they represent
             // the same monster in our database
         }
 
         @Override
         public boolean areContentsTheSame(@NonNull Monster oldItem, @NonNull Monster newItem) {
-            return  oldItem.getVotes() == newItem.getVotes() &&
-                    oldItem.getStars() == newItem.getStars() &&
-                    oldItem.getScariness() == newItem.getScariness() &&
+            return  oldItem.getVotes().equals(newItem.getVotes()) &&
+                    oldItem.getStars().equals(newItem.getStars()) &&
+                    oldItem.getScariness().equals(newItem.getScariness()) &&
                     oldItem.getDescription().equals(newItem.getDescription()) &&
                     oldItem.getName().equals(newItem.getName()) &&
                     oldItem.getImage().equals(newItem.getImage());

@@ -14,21 +14,21 @@ public class Monster implements Serializable {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "ID")
-    private int id;
+    private Integer id;
 
     @ColumnInfo
     private String name;
     private String description;
     private String image;
-    private int scariness;
-    private int votes;
-    private int stars;
+    private Integer scariness;
+    private Integer votes;
+    private Integer stars;
 
     @Ignore
     public Monster() {
     }
 
-    public Monster(String name, String description, String image, int scariness, int votes, int stars) {
+    public Monster(String name, String description, String image, Integer scariness, Integer votes, Integer stars) {
         this.name = name;
         this.description = description;
         this.image = image;
@@ -38,11 +38,11 @@ public class Monster implements Serializable {
     }
 
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -70,27 +70,27 @@ public class Monster implements Serializable {
         this.image = image;
     }
 
-    public int getScariness() {
+    public Integer getScariness() {
         return scariness;
     }
 
-    public void setScariness(int scariness) {
+    public void setScariness(Integer scariness) {
         this.scariness = scariness;
     }
 
-    public int getVotes() {
+    public Integer getVotes() {
         return votes;
     }
 
-    public void setVotes(int votes) {
+    public void setVotes(Integer votes) {
         this.votes = votes;
     }
 
-    public int getStars() {
+    public Integer getStars() {
         return stars;
     }
 
-    public void setStars(int stars) {
+    public void setStars(Integer stars) {
         this.stars = stars;
     }
 

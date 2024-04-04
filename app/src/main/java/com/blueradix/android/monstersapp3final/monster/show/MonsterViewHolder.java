@@ -49,6 +49,7 @@ public class MonsterViewHolder extends RecyclerView.ViewHolder{
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 onItemClickListener.onClick(monster, view);
             }
         });
